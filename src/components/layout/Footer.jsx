@@ -145,8 +145,8 @@ const Footer = () => {
           </p>
 
           <p>
-            Designed & Developed by{" "}
-            <span className="text-accent">Armughan.Dev</span>
+            Powered & Developed by{" "}
+            <span className="text-accent">influitivezone.com</span>
           </p>
         </div>
       </div>
