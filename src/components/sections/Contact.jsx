@@ -2,11 +2,14 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 function Contact() {
   return (
-    <section className="py-24 bg-[#0b0b0b] text-white">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Section Title */}
+    <section className="relative py-24 bg-[#0b0b0b] text-white overflow-hidden">
+      {/* Purple Ambient Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-purple-600/10 blur-[140px]"></div>
+
+      <div className="relative max-w-7xl mx-auto px-6">
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-accent uppercase tracking-widest text-sm mb-3">
+          <p className="text-purple-400 uppercase tracking-widest text-sm mb-3">
             Contact Us
           </p>
 
@@ -21,25 +24,34 @@ function Contact() {
         </div>
 
         {/* Contact Layout */}
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* LEFT SIDE */}
-          <div className="space-y-8">
+          <div className="space-y-10">
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <Mail className="text-accent" size={22} />
+              <div className="flex items-center gap-4 group">
+                <div className="p-3 rounded-lg bg-white/5 border border-white/10 group-hover:border-purple-400 transition">
+                  <Mail className="text-purple-400" size={20} />
+                </div>
+
                 <span className="text-white/80">
                   contact@fleurconsulting.com
                 </span>
               </div>
 
-              <div className="flex items-center gap-4">
-                <Phone className="text-accent" size={22} />
+              <div className="flex items-center gap-4 group">
+                <div className="p-3 rounded-lg bg-white/5 border border-white/10 group-hover:border-purple-400 transition">
+                  <Phone className="text-purple-400" size={20} />
+                </div>
+
                 <span className="text-white/80">+1 (555) 123-4567</span>
               </div>
 
-              <div className="flex items-center gap-4">
-                <MapPin className="text-accent" size={22} />
+              <div className="flex items-center gap-4 group">
+                <div className="p-3 rounded-lg bg-white/5 border border-white/10 group-hover:border-purple-400 transition">
+                  <MapPin className="text-purple-400" size={20} />
+                </div>
+
                 <span className="text-white/80">
                   120 Hospitality Avenue, New York
                 </span>
@@ -51,23 +63,24 @@ function Contact() {
               <iframe
                 title="map"
                 src="https://www.google.com/maps?q=New+York&output=embed"
-                className="w-full h-[250px] border-0"
+                className="w-full h-[260px] border-0"
                 loading="lazy"
               ></iframe>
             </div>
           </div>
 
-          {/* RIGHT SIDE (FORM) */}
-          <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+          {/* RIGHT SIDE FORM */}
+          <div className="bg-white/5 border border-white/10 rounded-xl p-8 backdrop-blur-sm hover:border-purple-400/40 transition">
             <form className="space-y-6">
               <div>
                 <label className="block text-sm text-white/70 mb-2">
                   Full Name
                 </label>
+
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="w-full px-4 py-3 rounded-lg bg-black border border-white/10 text-white focus:outline-none focus:border-accent"
+                  className="w-full px-4 py-3 rounded-lg bg-black border border-white/10 text-white focus:outline-none focus:border-purple-400 transition"
                 />
               </div>
 
@@ -75,10 +88,11 @@ function Contact() {
                 <label className="block text-sm text-white/70 mb-2">
                   Email Address
                 </label>
+
                 <input
                   type="email"
                   placeholder="your@email.com"
-                  className="w-full px-4 py-3 rounded-lg bg-black border border-white/10 text-white focus:outline-none focus:border-accent"
+                  className="w-full px-4 py-3 rounded-lg bg-black border border-white/10 text-white focus:outline-none focus:border-purple-400 transition"
                 />
               </div>
 
@@ -86,10 +100,11 @@ function Contact() {
                 <label className="block text-sm text-white/70 mb-2">
                   Subject
                 </label>
+
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="w-full px-4 py-3 rounded-lg bg-black border border-white/10 text-white focus:outline-none focus:border-accent"
+                  className="w-full px-4 py-3 rounded-lg bg-black border border-white/10 text-white focus:outline-none focus:border-purple-400 transition"
                 />
               </div>
 
@@ -97,16 +112,17 @@ function Contact() {
                 <label className="block text-sm text-white/70 mb-2">
                   Message
                 </label>
+
                 <textarea
                   rows="4"
                   placeholder="Tell us about your project..."
-                  className="w-full px-4 py-3 rounded-lg bg-black border border-white/10 text-white focus:outline-none focus:border-accent"
+                  className="w-full px-4 py-3 rounded-lg bg-black border border-white/10 text-white focus:outline-none focus:border-purple-400 transition"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-accent text-black font-semibold py-3 rounded-full hover:shadow-lg transition"
+                className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 rounded-full transition duration-300 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)]"
               >
                 Send Message
               </button>

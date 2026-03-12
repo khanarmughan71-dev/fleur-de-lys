@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -41,17 +42,22 @@ const services = [
 
 function Services() {
   return (
-    <section className="py-24 bg-gradient-to-b from-[#0a0a0a] via-[#111] to-black text-white">
+    <section className="relative py-24 bg-gradient-to-b from-black via-[#0b0b0b] to-black text-white overflow-hidden">
+      {/* Purple Ambient Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-purple-600/10 blur-[140px]"></div>
+
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-accent uppercase tracking-widest text-sm mb-3">
+          <p className="text-purple-400 uppercase tracking-widest text-sm mb-3">
             Our Expertise
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-5">
             Consulting That Elevates
-            <span className="block text-accent">Restaurant Performance</span>
+            <span className="block text-purple-400">
+              Restaurant Performance
+            </span>
           </h2>
 
           <p className="text-white/70">
@@ -63,38 +69,53 @@ function Services() {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group relative h-[340px] rounded-xl overflow-hidden shadow-lg"
-            >
-              {/* Image */}
-              <img
-                src={`${service.image}?auto=format&fit=crop&w=900&q=80`}
-                alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
-              />
+          {services.map((service, index) => {
+            const Card = index % 2 === 0 ? motion.div : "div";
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition"></div>
+            return (
+              <Card
+                key={index}
+                {...(index % 2 === 0 && {
+                  initial: { opacity: 0, y: 40 },
+                  whileInView: { opacity: 1, y: 0 },
+                  viewport: { once: true },
+                  transition: { duration: 0.6, delay: index * 0.1 },
+                })}
+                className="group relative h-[340px] rounded-xl overflow-hidden border border-white/10"
+              >
+                {/* Image */}
+                <img
+                  src={`${service.image}?auto=format&fit=crop&w=900&q=80`}
+                  alt={service.title}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                />
 
-              {/* Content */}
-              <div className="relative z-10 h-full flex flex-col justify-end p-6">
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition"></div>
 
-                <p className="text-white/80 text-sm mb-3">
-                  {service.description}
-                </p>
+                {/* Purple Hover Glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-t from-purple-600/20 via-transparent to-transparent transition"></div>
 
-                <Link
-                  to="/services"
-                  className="text-accent text-sm font-semibold"
-                >
-                  Learn More →
-                </Link>
-              </div>
-            </div>
-          ))}
+                {/* Content */}
+                <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                  <h3 className="text-xl font-semibold mb-2">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-white/80 text-sm mb-3">
+                    {service.description}
+                  </p>
+
+                  <Link
+                    to="/services"
+                    className="text-purple-400 text-sm font-semibold hover:underline"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -4,7 +4,10 @@ import logo from "../../assets/images/fleur-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0a0a0a] text-white/70 pt-16 sm:pt-20 lg:pt-24 pb-8 border-t border-white/10">
+    <footer className="bg-black text-white/70 pt-20 pb-8 border-t border-white/10 relative overflow-hidden">
+      {/* Purple Ambient Glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-purple-600/10 blur-[140px]"></div>
+
       <div className="max-w-7xl mx-auto px-6">
         {/* ================= TOP GRID ================= */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14 items-start">
@@ -22,7 +25,7 @@ const Footer = () => {
                   FLEUR-DE-LYS
                 </h1>
 
-                <p className="font-serif uppercase text-[10px] tracking-[0.35em] text-white/70">
+                <p className="font-serif uppercase text-[10px] tracking-[0.35em] text-white/60">
                   RESTAURANT SERVICES
                 </p>
               </div>
@@ -36,7 +39,7 @@ const Footer = () => {
 
             <Link
               to="/contact"
-              className="inline-block bg-white text-black font-semibold px-5 py-2.5 rounded-full hover:opacity-90 transition text-sm"
+              className="inline-block bg-purple-600 hover:bg-purple-500 text-white font-semibold px-5 py-2.5 rounded-full transition text-sm"
             >
               Book Consultation
             </Link>
@@ -48,25 +51,31 @@ const Footer = () => {
 
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/" className="hover:text-accent transition">
+                <Link to="/" className="hover:text-purple-400 transition">
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link to="/about" className="hover:text-accent transition">
+                <Link to="/about" className="hover:text-purple-400 transition">
                   About
                 </Link>
               </li>
 
               <li>
-                <Link to="/services" className="hover:text-accent transition">
+                <Link
+                  to="/services"
+                  className="hover:text-purple-400 transition"
+                >
                   Services
                 </Link>
               </li>
 
               <li>
-                <Link to="/contact" className="hover:text-accent transition">
+                <Link
+                  to="/contact"
+                  className="hover:text-purple-400 transition"
+                >
                   Contact
                 </Link>
               </li>
@@ -80,21 +89,23 @@ const Footer = () => {
             </h4>
 
             <ul className="space-y-2 text-sm">
-              <li className="hover:text-accent transition">
+              <li className="hover:text-purple-400 transition">
                 Restaurant Concept Development
               </li>
 
-              <li className="hover:text-accent transition">Menu Engineering</li>
+              <li className="hover:text-purple-400 transition">
+                Menu Engineering
+              </li>
 
-              <li className="hover:text-accent transition">
+              <li className="hover:text-purple-400 transition">
                 Operational Optimization
               </li>
 
-              <li className="hover:text-accent transition">
+              <li className="hover:text-purple-400 transition">
                 Leadership & Staff Training
               </li>
 
-              <li className="hover:text-accent transition">
+              <li className="hover:text-purple-400 transition">
                 Revenue Growth Strategy
               </li>
             </ul>
@@ -109,21 +120,21 @@ const Footer = () => {
             <div className="flex gap-3">
               <a
                 href="#"
-                className="p-2.5 sm:p-3 bg-[#141414] rounded-lg hover:bg-accent hover:text-black transition"
+                className="p-3 bg-[#141414] rounded-lg hover:bg-purple-600 hover:text-white transition"
               >
                 <Facebook size={18} />
               </a>
 
               <a
                 href="#"
-                className="p-2.5 sm:p-3 bg-[#141414] rounded-lg hover:bg-accent hover:text-black transition"
+                className="p-3 bg-[#141414] rounded-lg hover:bg-purple-600 hover:text-white transition"
               >
                 <Linkedin size={18} />
               </a>
 
               <a
                 href="#"
-                className="p-2.5 sm:p-3 bg-[#141414] rounded-lg hover:bg-accent hover:text-black transition"
+                className="p-3 bg-[#141414] rounded-lg hover:bg-purple-600 hover:text-white transition"
               >
                 <Instagram size={18} />
               </a>
@@ -138,7 +149,7 @@ const Footer = () => {
         </div>
 
         {/* ================= BOTTOM ================= */}
-        <div className="border-t border-white/10 mt-10 pt-5 flex flex-col md:flex-row justify-between items-center text-sm text-white/50 gap-3 text-center md:text-left">
+        <div className="border-t border-white/10 mt-12 pt-5 flex flex-col md:flex-row justify-between items-center text-sm text-white/50 gap-3 text-center md:text-left">
           <p>
             © {new Date().getFullYear()} Fleur-de-Lys Consulting. All rights
             reserved.
@@ -146,7 +157,7 @@ const Footer = () => {
 
           <p>
             Powered & Developed by{" "}
-            <span className="text-accent">influitivezone.com</span>
+            <span className="text-purple-400">influitivezone.com</span>
           </p>
         </div>
       </div>
