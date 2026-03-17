@@ -25,7 +25,6 @@ function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
-
           {/* LOGO */}
           <Link to="/" className="flex items-center gap-3">
             <img
@@ -67,33 +66,45 @@ function Navbar() {
 
             {/* Dropdown */}
             <div className="relative group">
-              <button className="flex items-center gap-1 hover:text-purple-400 transition">
+              <button className="flex items-center gap-1 hover:text-gray-300 transition">
                 SERVICES <span className="text-xs">▾</span>
               </button>
 
-              <div className="absolute left-0 mt-4 w-56 bg-[#0b0b0b] border border-white/10 text-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-
+              <div className="absolute left-0 mt-4 w-64 bg-[#0b0b0b] border border-white/10 text-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <Link
-                  to="/services"
+                  to="/services#strategy"
                   className="block px-6 py-3 hover:bg-white/5"
                 >
-                  Restaurant Consulting
+                  Strategy & Concept
                 </Link>
 
                 <Link
-                  to="/services"
+                  to="/services#design"
                   className="block px-6 py-3 hover:bg-white/5"
                 >
-                  Staff Training
+                  Design & Build
                 </Link>
 
                 <Link
-                  to="/services"
+                  to="/services#operations"
                   className="block px-6 py-3 hover:bg-white/5"
                 >
-                  Menu Development
+                  Operations & Training
                 </Link>
 
+                <Link
+                  to="/services#systems"
+                  className="block px-6 py-3 hover:bg-white/5"
+                >
+                  Systems & Performance
+                </Link>
+
+                <Link
+                  to="/services#growth"
+                  className="block px-6 py-3 hover:bg-white/5"
+                >
+                  Growth & Expansion
+                </Link>
               </div>
             </div>
 
@@ -127,7 +138,6 @@ function Navbar() {
           >
             ☰
           </button>
-
         </div>
 
         {/* MOBILE MENU */}
@@ -137,7 +147,6 @@ function Navbar() {
           }`}
         >
           <div className="flex flex-col gap-6 text-white bg-black/80 backdrop-blur-xl border border-white/10 rounded-xl p-6 mt-4">
-
             <Link to="/" onClick={() => setIsOpen(false)}>
               HOME
             </Link>
@@ -161,10 +170,8 @@ function Navbar() {
             >
               Book Consultation
             </Link>
-
           </div>
         </div>
-
       </nav>
     </header>
   );

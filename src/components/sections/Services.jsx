@@ -3,40 +3,22 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Restaurant Concept Development",
+    title: "Construction & Design",
     description:
-      "Craft distinctive dining concepts that attract the right audience and stand out in competitive markets.",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+      "Plan and execute restaurant construction and interior design that aligns with your brand and operational needs.",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
   },
   {
-    title: "Menu Engineering",
+    title: "Catering & Events",
     description:
-      "Design profitable menus that guide customer choices and maximize restaurant margins.",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947",
+      "Expand your business with catering services and event strategies that increase revenue and brand exposure.",
+    image: "https://images.unsplash.com/photo-1555244162-803834f70033",
   },
   {
-    title: "Operational Optimization",
+    title: "Commercial Real Estate Expertise",
     description:
-      "Improve service flow, staffing systems, and kitchen efficiency to deliver consistent performance.",
-    image: "https://images.unsplash.com/photo-1555992336-03a23c7b20ee",
-  },
-  {
-    title: "Brand & Experience Strategy",
-    description:
-      "Build a memorable brand and dining experience that keeps customers returning.",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
-  },
-  {
-    title: "Leadership & Staff Training",
-    description:
-      "Develop strong leadership systems and train teams for exceptional service delivery.",
-    image: "https://images.unsplash.com/photo-1556745757-8d76bdb6984b",
-  },
-  {
-    title: "Revenue Growth Strategy",
-    description:
-      "Implement data-driven strategies designed to increase profitability and long-term growth.",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+      "Expert guidance on site selection and lease negotiation to secure the best location for your restaurant.",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
   },
 ];
 

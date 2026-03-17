@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/layout/Navbar";
 
+import ScrollToHash from "../ScrollToHash";
+
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -13,6 +15,7 @@ import Footer from "./components/layout/Footer";
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToHash />
       <Navbar />
 
       <Routes>
