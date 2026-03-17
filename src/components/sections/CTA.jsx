@@ -28,7 +28,7 @@ function CTA() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-[2px] transition duration-300"
+              className="px-8 py-4 bg-gray-500 hover:bg-gray-400 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-[2px] transition duration-300"
             >
               Book Consultation
             </Link>

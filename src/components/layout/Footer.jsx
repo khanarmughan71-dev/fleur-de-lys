@@ -5,8 +5,8 @@ import logo from "../../assets/images/fleur-logo.png";
 const Footer = () => {
   return (
     <footer className="bg-black text-white/70 pt-20 pb-8 border-t border-white/10 relative overflow-hidden">
-      {/* Purple Ambient Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-purple-600/10 blur-[140px]"></div>
+      {/* Silver Ambient Glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-gray-300/10 blur-[140px]"></div>
 
       <div className="max-w-7xl mx-auto px-6">
         {/* ================= TOP GRID ================= */}
@@ -39,7 +39,7 @@ const Footer = () => {
 
             <Link
               to="/contact"
-              className="inline-block bg-purple-600 hover:bg-purple-500 text-white font-semibold px-5 py-2.5 rounded-full transition text-sm"
+              className="inline-block bg-gray-300/20 hover:bg-gray-400/30 text-white font-semibold px-5 py-2.5 rounded-full transition text-sm"
             >
               Book Consultation
             </Link>
@@ -51,31 +51,25 @@ const Footer = () => {
 
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/" className="hover:text-purple-400 transition">
+                <Link to="/" className="hover:text-gray-300 transition">
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link to="/about" className="hover:text-purple-400 transition">
+                <Link to="/about" className="hover:text-gray-300 transition">
                   About
                 </Link>
               </li>
 
               <li>
-                <Link
-                  to="/services"
-                  className="hover:text-purple-400 transition"
-                >
+                <Link to="/services" className="hover:text-gray-300 transition">
                   Services
                 </Link>
               </li>
 
               <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-purple-400 transition"
-                >
+                <Link to="/contact" className="hover:text-gray-300 transition">
                   Contact
                 </Link>
               </li>
@@ -89,23 +83,23 @@ const Footer = () => {
             </h4>
 
             <ul className="space-y-2 text-sm">
-              <li className="hover:text-purple-400 transition">
+              <li className="hover:text-gray-300 transition">
                 Restaurant Concept Development
               </li>
 
-              <li className="hover:text-purple-400 transition">
+              <li className="hover:text-gray-300 transition">
                 Menu Engineering
               </li>
 
-              <li className="hover:text-purple-400 transition">
+              <li className="hover:text-gray-300 transition">
                 Operational Optimization
               </li>
 
-              <li className="hover:text-purple-400 transition">
+              <li className="hover:text-gray-300 transition">
                 Leadership & Staff Training
               </li>
 
-              <li className="hover:text-purple-400 transition">
+              <li className="hover:text-gray-300 transition">
                 Revenue Growth Strategy
               </li>
             </ul>
@@ -120,21 +114,21 @@ const Footer = () => {
             <div className="flex gap-3">
               <a
                 href="#"
-                className="p-3 bg-[#141414] rounded-lg hover:bg-purple-600 hover:text-white transition"
+                className="p-3 bg-[#141414] rounded-lg hover:bg-gray-300/20 hover:text-white transition"
               >
                 <Facebook size={18} />
               </a>
 
               <a
                 href="#"
-                className="p-3 bg-[#141414] rounded-lg hover:bg-purple-600 hover:text-white transition"
+                className="p-3 bg-[#141414] rounded-lg hover:bg-gray-300/20 hover:text-white transition"
               >
                 <Linkedin size={18} />
               </a>
 
               <a
                 href="#"
-                className="p-3 bg-[#141414] rounded-lg hover:bg-purple-600 hover:text-white transition"
+                className="p-3 bg-[#141414] rounded-lg hover:bg-gray-300/20 hover:text-white transition"
               >
                 <Instagram size={18} />
               </a>
@@ -157,7 +151,7 @@ const Footer = () => {
 
           <p>
             Powered & Developed by{" "}
-            <span className="text-purple-400">influitivezone.com</span>
+            <span className="text-gray-300">influitivezone.com</span>
           </p>
         </div>
       </div>

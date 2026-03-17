@@ -37,8 +37,8 @@ const steps = [
 function Process() {
   return (
     <section className="relative py-24 bg-gradient-to-b from-black to-[#0b0b0b] text-white overflow-hidden">
-      {/* Purple Ambient Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-purple-600/10 blur-[140px]"></div>
+      {/* Premium Silver Ambient Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#B0B0B020] blur-[140px]"></div>
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Section Header */}
@@ -49,13 +49,18 @@ function Process() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto mb-20"
         >
-          <p className="text-purple-400 uppercase tracking-widest text-sm mb-3">
+          <p
+            className="uppercase tracking-widest text-sm mb-3"
+            style={{ color: "#E0E0E0" }}
+          >
             Our Process
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-5">
             A Proven Framework for
-            <span className="block text-purple-400">Restaurant Success</span>
+            <span className="block" style={{ color: "#E0E0E0" }}>
+              Restaurant Success
+            </span>
           </h2>
 
           <p className="text-white/70">
@@ -75,17 +80,20 @@ function Process() {
                 key={index}
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="relative text-center p-8 rounded-xl bg-white/5 border border-white/10 hover:border-purple-400/40 transition duration-300 group"
+                className="relative text-center p-8 rounded-xl bg-white/5 border border-white/10 hover:border-[#E0E0E0]/40 transition duration-300 group"
               >
                 {/* Icon */}
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-black border border-white/10 flex items-center justify-center group-hover:border-purple-400 transition">
-                  <Icon size={26} className="text-purple-400" />
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-black border border-white/10 flex items-center justify-center group-hover:border-[#E0E0E0] transition">
+                  <Icon size={26} className="text-[#E0E0E0]" />
                 </div>
 
                 {/* Step Number */}
-                <div className="text-purple-400 text-sm font-semibold mb-2">
+                <div
+                  className="text-sm font-semibold mb-2"
+                  style={{ color: "#E0E0E0" }}
+                >
                   Step {index + 1}
                 </div>
 

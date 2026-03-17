@@ -5,6 +5,7 @@ import logo from "../../assets/images/fleur-logo.png";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,11 +57,11 @@ function Navbar() {
           <div
             className={`hidden md:flex items-center space-x-10 transition-colors duration-300 text-white`}
           >
-            <Link to="/" className="hover:text-purple-400 transition">
+            <Link to="/" className="hover:text-gray-300 transition">
               HOME
             </Link>
 
-            <Link to="/about" className="hover:text-purple-400 transition">
+            <Link to="/about" className="hover:text-gray-300 transition">
               ABOUT
             </Link>
 
@@ -108,7 +109,7 @@ function Navbar() {
               </div>
             </div>
 
-            <Link to="/contact" className="hover:text-purple-400 transition">
+            <Link to="/contact" className="hover:text-gray-300 transition">
               CONTACT
             </Link>
           </div>
@@ -121,10 +122,10 @@ function Navbar() {
               px-7 py-3
               font-semibold
               rounded-full
-              bg-purple-500 hover:bg-purple-600
+              bg-gray-500 hover:bg-gray-400
               text-white
               shadow-lg
-              hover:shadow-[0_0_20px_rgba(168,85,247,0.5)]
+              hover:shadow-[0_0_20px_rgba(192,192,192,0.5)]
               transition-all duration-300"
             >
               Book Consultation
@@ -143,7 +144,7 @@ function Navbar() {
         {/* MOBILE MENU */}
         <div
           className={`md:hidden transition-all duration-300 overflow-hidden ${
-            isOpen ? "max-h-96 py-6" : "max-h-0"
+            isOpen ? "max-h-160 py-6" : "max-h-0"
           }`}
         >
           <div className="flex flex-col gap-6 text-white bg-black/80 backdrop-blur-xl border border-white/10 rounded-xl p-6 mt-4">
@@ -155,9 +156,59 @@ function Navbar() {
               ABOUT
             </Link>
 
-            <Link to="/services" onClick={() => setIsOpen(false)}>
-              SERVICES
-            </Link>
+            <div className="flex flex-col">
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="flex items-center justify-between gap-1 hover:text-gray-300 transition w-full"
+              >
+                SERVICES{" "}
+                <span className="text-xs">
+                  {mobileServicesOpen ? "▴" : "▾"}
+                </span>
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-300 mt-2 ${
+                  mobileServicesOpen ? "max-h-64" : "max-h-0"
+                }`}
+              >
+                <Link
+                  to="/services#strategy"
+                  className="block px-6 py-3 hover:bg-white/5"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Strategy & Concept
+                </Link>
+                <Link
+                  to="/services#design"
+                  className="block px-6 py-3 hover:bg-white/5"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Design & Build
+                </Link>
+                <Link
+                  to="/services#operations"
+                  className="block px-6 py-3 hover:bg-white/5"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Operations & Training
+                </Link>
+                <Link
+                  to="/services#systems"
+                  className="block px-6 py-3 hover:bg-white/5"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Systems & Performance
+                </Link>
+                <Link
+                  to="/services#growth"
+                  className="block px-6 py-3 hover:bg-white/5"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Growth & Expansion
+                </Link>
+              </div>
+            </div>
 
             <Link to="/contact" onClick={() => setIsOpen(false)}>
               CONTACT
@@ -165,7 +216,7 @@ function Navbar() {
 
             <Link
               to="/contact"
-              className="bg-purple-500 text-white text-center py-2 rounded-full font-semibold hover:bg-purple-600 transition"
+              className="bg-gray-500 text-white text-center py-2 rounded-full font-semibold hover:bg-purple-600 transition"
               onClick={() => setIsOpen(false)}
             >
               Book Consultation
